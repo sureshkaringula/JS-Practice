@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{color: green;}
+        .error{color: red;}
+    </style>
+</head>
+<body>
+    <p id="msg"> Message goes here</p>
+    <button onclick="showSuccess()">Success</button>
+    <button onclick="showError()">Error</button>
+
+    <script>
+        function showSuccess(){
+            let msg = document.getElementById("msg");
+            msg.classList.add("Success");
+            msg.classList.remove("Error");
+            msg.textContent = "Operation Successful!"
+        }
+        function showError(){
+            let msg = document.getElementById("msg");
+            msg.classList.add("Error");
+            msg.classList.remove("Success");
+            msg.textContent = "Something went wrong!"
+        }
+    </script>
+</body>
+</html>

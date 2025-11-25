@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 60px;
+            height: 60px;
+            background: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addBox()">Add Box</button>
+    <button onclick="removeBox()">Remove Box</button>
+    <div id="container"></div>
+
+    <script>
+        function addBox(){
+            let box = document.createElement("div");
+            box.classList.add("box");
+            document.getElementById("container").appendChild(box);
+        }
+        function removeBox(){
+            let container = document.getElementById("container");
+            container.lastElementChild?.remove();
+        }
+    </script>
+</body>
+</html>

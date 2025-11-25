@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <style>
+    #btn{
+        padding: 6px 12px;
+        background-color: rgb(136, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+        width: auto;
+        display: inline-block;
+    }
+    #btn:hover{
+        background-color: darkcyan;
+    }
+</style>
+
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click" ,function(){
+            document.getElementById("result").innerText="Button was clicked! ";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+:root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --border: #dcdfe4;
+    --text: #1a1a1c;
+    --muted: #7e828a;
+    --primary: #3b82f6;
+}
+
+.dark {
+    --bg: #0d0f12;
+    --card: #15181c;
+    --border: #2a2e34;
+    --text: #e8e9eb;
+    --muted: #92959c;
+    --primary: #4c8dff;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 480px;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.task-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 15px;
+}
+
+.add-btn {
+    padding: 12px 20px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter {
+    flex: 1;
+    padding: 8px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter.active {
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+}
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 14px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.15s ease;
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.task-actions i {
+    margin-left: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--muted);
+}
+
+.task-actions i:hover {
+    color: var(--primary);
+}

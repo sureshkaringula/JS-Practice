@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event</title>
+</head>
+<body>
+    <select id="city">
+        <option value="">select city</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bengalore">Bengalore</option>
+    </select>
+    <p id="selectedCity"></p>
+
+    <script>
+        document.getElementById("city").addEventListener("change",(e)=>{
+            document.getElementById("selectedCity").innerText="You selected: " + e.target.value;
+        });  
+    </script>
+</body>
+</html>

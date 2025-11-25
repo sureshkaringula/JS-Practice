@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Function with multiple parameters & logic</h2>
+
+    <script>
+        function calculateBill(price,percent){
+            let total = price * percent;
+            return total;
+        }
+        console.log(calculateBill(2500,10))
+    </script>
+
+    <script>
+        function calculateGrade(marks,total){
+            let percent = marks/total * 100;
+            if (percent >= 90){
+                return "A";
+            }else if (percent >= 80){
+                return "B";
+            }else if(percent >= 70){
+                return "C";
+            }else {
+                return "Fail";
+            }
+        }console.log(calculateGrade(578,600));
+    </script>
+</body>
+</html>

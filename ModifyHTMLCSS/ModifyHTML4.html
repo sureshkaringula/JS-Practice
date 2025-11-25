@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="num">Hello Im Suresh</p>
+    <p class="num">Front-End Developer</p>
+    <button onclick="changeAll()">Change All</button>
+
+    <script>
+        function changeAll(){
+            let items = document.querySelectorAll(".num");
+            items.forEach((el,i) =>{
+            el.innerText = " Full Stack Developer " + (i + 1);
+        });
+        }
+        
+    </script>
+</body>
+</html>

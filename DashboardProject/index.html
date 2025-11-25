@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suresh Royals Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+
+            <button id="menuToggle" class="hamburger">☰</button>
+
+            <div class="logo" id="homeClick">Learn & Skill</div>
+
+            <nav class="nav-links" id="navMenu">
+                <button class="nav-btn active" data-section="homeSection">Home</button>
+                <button class="nav-btn" data-section="servicesSection">Services</button>
+                <button class="nav-btn" data-section="portfolioSection">Portfolio</button>
+                <button class="nav-btn" data-section="dashboardSection">Dashboard</button>
+                <button class="nav-btn" data-section="aboutSection">About</button>
+                <button class="nav-btn" data-section="contactSection">Contact</button>
+            </nav>
+
+            <button id="darkModeToggle" class="icon-btn">🌙</button>
+
+        </header>
+
+        <!-- HOME SECTION -->
+        <section id="homeSection" class="section visible fade">
+            <div class="landing-container">
+                <div class="landing-left">
+                    <h1 class="landing-title reveal">Web Design<br>Landing Page</h1>
+                    <p class="landing-sub reveal">
+                        Build modern UI experiences, manage users, and explore interactive tools effortlessly.
+                    </p>
+                    <div class="landing-actions reveal">
+                        <button class="cta-btn" data-section="dashboardSection">Get Started</button>
+                    </div>
+                </div>
+
+                <div class="landing-right reveal">
+                    <div class="dashboard-mockup">
+                        <div class="mock-header"></div>
+                        <div class="mock-row">
+                            <div class="mock-card"></div>
+                            <div class="mock-card"></div>
+                        </div>
+                        <div class="mock-wide"></div>
+                        <div class="mock-row">
+                            <div class="mock-small"></div>
+                            <div class="mock-small"></div>
+                            <div class="mock-small"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboardSection" class="section fade">
+            <h2 class="section-title reveal">Dashboard Overview</h2>
+
+            <div class="dashboard-widgets">
+                <div class="stat-card reveal"><h3>Total Users</h3><p id="statTotal">0</p></div>
+                <div class="stat-card reveal"><h3>Male Users</h3><p id="statMale">0</p></div>
+                <div class="stat-card reveal"><h3>Female Users</h3><p id="statFemale">0</p></div>
+                <div class="stat-card reveal"><h3>Last Update</h3><p id="statUpdated">--</p></div>
+            </div>
+
+            <h3 class="sub-section-title reveal">User Finder</h3>
+
+            <div class="controls reveal">
+                <select id="userCount">
+                    <option value="1">1 User</option>
+                    <option value="5">5 Users</option>
+                    <option value="10" selected>10 Users</option>
+                    <option value="20">20 Users</option>
+                    <option value="50">50 Users</option>
+                </select>
+
+                <select id="genderFilter">
+                    <option value="all">All Genders</option>
+                    <option value="male">Male Only</option>
+                    <option value="female">Female Only</option>
+                </select>
+
+                <button id="loadUsersBtn" class="primary-btn">Load Users</button>
+            </div>
+
+            <p id="status" class="status"></p>
+            <div id="userContainer"></div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="servicesSection" class="section fade">
+            <h2 class="section-title reveal">Our Training & Career Tracks</h2>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <h3>MERN Stack</h3>
+                    <p>MongoDB, Express.js, React, Node.js — full modern app development.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <h3>Java Full Stack</h3>
+                    <p>Core Java, Spring Boot, Microservices & UI integration.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <h3>Data Analyst</h3>
+                    <p>Excel, SQL, Power BI, Tableau & insights.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <h3>Azure Data Engineer</h3>
+                    <p>Data Factory, Synapse, ETL & cloud pipelines.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolioSection" class="section fade">
+            <h2 class="section-title reveal">Projects & Portfolio</h2>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card reveal">
+                    <h3>Garage Management System</h3>
+                    <p>A full CRUD application to manage vehicles, services, and billing for a garage.</p>
+                    <span class="tag">Java • JDBC • Swing</span>
+                </div>
+
+                <div class="portfolio-card reveal">
+                    <h3>User Finder Dashboard</h3>
+                    <p>Async JS app using Promises, async/await, and fetch to explore random user data.</p>
+                    <span class="tag">JavaScript • API • UI</span>
+                </div>
+
+                <div class="portfolio-card reveal">
+                    <h3>Student Records Portal</h3>
+                    <p>Web app to handle student information, marks, and reports with clean UI.</p>
+                    <span class="tag">MERN Stack</span>
+                </div>
+
+                <div class="portfolio-card reveal">
+                    <h3>Analytics Report Board</h3>
+                    <p>Dashboard mockups and charts for data analysis and progress tracking.</p>
+                    <span class="tag">Data • Dashboard</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="aboutSection" class="section fade">
+            <h2 class="section-title reveal">About Us</h2>
+
+            <div class="about-content reveal">
+                <p>
+                    We deliver industry-focused training and practical project experience
+                    to help learners secure strong IT careers.
+                </p>
+
+                <p>
+                    Our paths include MERN Stack, Java Full Stack,
+                    Data Analytics, and Azure Data Engineering — covering modern,
+                    high-demand technologies.
+                </p>
+
+                <p>
+                    We focus on hands-on learning, portfolio building, mentorship,
+                    and interview readiness so you gain confidence to succeed.
+                </p>
+
+                <div class="about-highlights">
+                    <div class="reveal">✅ Real-world project exposure</div>
+                    <div class="reveal">✅ Skill-based practical learning</div>
+                    <div class="reveal">✅ Career guidance & interview preparation</div>
+                    <div class="reveal">✅ Curriculum aligned with industry standards</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contactSection" class="section fade">
+            <h2 class="section-title reveal">Contact Us</h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item reveal">
+                        <span>📍</span>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Door No.2-4-197/A, Cinema Road,Below Margadarsi Office, Pattiwar Complex,Hyderabad, Telangana, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item reveal">
+                        <span>📞</span>
+                        <div>
+                            <h3>Phone / WhatsApp</h3>
+                            <p>+91 9876543210</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item reveal">
+                        <span>✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>learnandskill@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+     <div class="contact-map">
+    <iframe
+        class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.435475712689!2d78.3612929749865!3d17.43885898345712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93eb7ebafc0d%3A0xe2350923d5aee153!2sGachibowli%20Cir%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032!5e0!3m2!1sen!2sin!4v1764040839724!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">Learn & Skill</div>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="GitHub">GH</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Learn & Skill. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

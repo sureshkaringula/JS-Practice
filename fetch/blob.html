@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blob Example</title>
+</head>
+<body>
+
+<button onclick="getImage()">Load Image</button>
+<div id="output"></div>
+
+<script>
+async function getImage() {
+  const response = await fetch("https://picsum.photos/200");
+  const blob = await response.blob();  
+  const url = URL.createObjectURL(blob);
+
+  document.getElementById("output").innerHTML =
+    `<img src="${url}" />`;
+}
+</script>
+
+</body>
+</html>

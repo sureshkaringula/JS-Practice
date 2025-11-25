@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+  <input type="text" name="username" placeholder="Enter username"><br><br>
+  <input type="file" name="photo"><br><br>
+  <button type="button" onclick="uploadFile()">Upload</button>
+</form>
+
+<pre id="output"></pre>
+
+<script>
+async function uploadFile() {
+  const form = document.querySelector("form");
+  const fd = new FormData(form);
+
+  // simulate server response
+  const username = fd.get("username");
+  const photo = fd.get("photo");
+
+  document.getElementById("output").textContent =
+    `Username: ${username}\nPhoto: ${photo ? photo.name : 'No file selected'}`;
+}
+</script>
+
+</body>
+</html>

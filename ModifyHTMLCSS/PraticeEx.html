@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #container {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .square {
+        width: 80px;
+        height: 80px;
+        background-color: orange;
+        border: 2px solid black;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="addBox()">Add Box</button>
+    <button onclick="removeBox()">Remove Box</button>
+
+    <div id="container"></div>
+    <script>
+        function addBox(){
+            let box = document.createElement("div");
+            box.className = "square";
+            document.getElementById("container").appendChild(box);
+        }
+        function removeBox(){
+            let container = document.getElementById("container");
+            container.lastChild?.remove();
+        }
+    </script>
+</body>
+</html>

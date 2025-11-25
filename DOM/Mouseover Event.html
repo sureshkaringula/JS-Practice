@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Event</title>
+    <style>
+       #hoverText{
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: rgb(41, 27, 27);
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+       } 
+    </style>
+</head>
+<body>
+    <p id="hoverText"> Hover on me</p>
+
+    <script>
+        let text = document.getElementById("hoverText");
+
+        text.addEventListener("mouseover",function(){
+            this.style.color = "orange";
+            this.style.backgroundColor = "black"
+        });
+
+        text.addEventListener("mouseout",function(){
+            this.style.color = "blue";
+            this.style.bavckgroundColor = " white";
+        });
+    </script>
+</body>
+</html>

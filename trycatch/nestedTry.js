@@ -1,10 +1,19 @@
 try {
+    let num = 10;
+
     try {
-        console.log(x); // x not defined
+        console.log("Dividing number...");
+        let result = num / undefinedVar; // causes error
+        console.log("Result:", result);
     } catch (innerError) {
-        console.log("Inner error:", innerError.message);
-        throw new Error("Outer level failure");
+        console.log("➡ Inner Catch Triggered");
+        console.log("Inner Error Message:", innerError.message);
+
+        // Re-throw with a different message
+        throw new Error("Processing failed in inner block");
     }
+
 } catch (outerError) {
-    console.log("Outer error:", outerError.message);
+    console.log("➡ Outer Catch Triggered");
+    console.log("Outer Error Message:", outerError.message);
 }

@@ -17,3 +17,4 @@ try {
     console.log("➡ Outer Catch Triggered");
     console.log("Outer Error Message:", outerError.message);
 }
+// testing git diff

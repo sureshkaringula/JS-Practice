@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Table</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <h2>Inventory Table</h2>
+    <table id="inventoryTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="filter-box">
+    <input type="text" id="searchInput" placeholder="Search by name">
+    <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Stationary">Stationary</option>
+    </select>
+    <input type="number" id="minPrice" placeholder="Min Price">
+    <input type="number" id="maxPrice" placeholder="Max price">
+    <label>
+        <input type="checkbox" id="lowStock">
+        Low Stock(Qty < 10)
+    </label>
+ </div>
+    <script src="app.js"></script>
+</body>
+</html>

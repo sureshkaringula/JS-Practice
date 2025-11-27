@@ -1,0 +1,132 @@
+
+
+    /* ---------- GLOBAL STYLING ---------- */
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 30px;
+        background: linear-gradient(to right, #eef2f3, #dfe9f3);
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 28px;
+        font-weight: 600;
+        color: #2b6777;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* ---------- TABLE CONTAINER ---------- */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        margin-bottom: 25px;
+    }
+
+    th, td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eee;
+        font-size: 15px;
+    }
+
+    th {
+        background: #2b6777;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:hover {
+        background: #f0f8ff;
+        transition: 0.3s;
+    }
+
+    /* Low Stock Row Highlight */
+    .low-stock {
+        background-color: #ffdddd !important;
+        color: #a00000;
+        font-weight: bold;
+    }
+
+    /* ---------- INPUT GROUP ---------- */
+    .filter-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    input, select {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #bbb;
+        min-width: 170px;
+        background: white;
+        transition: 0.2s;
+        font-size: 15px;
+    }
+
+    input:focus, select:focus {
+        border-color: #2b6777;
+        box-shadow: 0 0 5px rgba(43,103,119,0.5);
+        outline: none;
+    }
+
+    /* ---------- FILTER LABEL ---------- */
+    label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    button {
+        padding: 12px 18px;
+        margin: 8px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        background: #52ab98;
+        color: white;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #2b6777;
+    }
+
+    /* Special buttons */
+    .danger-btn {
+        background: #ff5c5c;
+    }
+
+    .danger-btn:hover {
+        background: #c0392b;
+    }
+
+    /* ---------- RESPONSIVENESS ---------- */
+    @media (max-width: 700px) {
+        table, thead, tbody, th, td, tr {
+            font-size: 13px;
+        }
+
+        input, select {
+            min-width: 100%;
+        }
+    }
